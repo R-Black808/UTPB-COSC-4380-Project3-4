@@ -14,7 +14,7 @@ public class AES {
     private byte[] keyBytes;
 
     public AES(String key) {
-        if (key.length() != 16) throw new IllegalArgumentException("Key must be 16 characters (128 bits)");
+        if (key.length() != 16) throw new IllegalArgumentException("Key must be exactly 16 characters (128 bits)");
         this.keyBytes = key.getBytes();
         this.roundKeys = keyExpansion(this.keyBytes);
     }
