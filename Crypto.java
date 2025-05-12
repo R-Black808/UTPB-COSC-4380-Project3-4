@@ -70,7 +70,8 @@ public class Crypto {
      */
     public static BigInteger getGenerator(int bits, BigInteger p) {
         // TODO: Generate an initial g with the given bit width.
-        for (BigInteger g = ; g.compareTo(p) < 0; g.add(BigInteger.ONE)) {
+        for (BigInteger g = BigInteger.TWO; g.compareTo(p) < 0; g = g.add(BigInteger.ONE)) {
+
             if (isValidG(g, p)) {
                 return g;
             }
