@@ -7,8 +7,8 @@ public class DHE {
     private BigInteger prime;
 
     public DHE(int gBits, int pBits) {
-        this.generator = BigInteger.TWO; // Standard generator
-        this.prime = new BigInteger(pBits, 100, Rand.getRand()); // Secure random prime
+        this.generator = BigInteger.TWO; 
+        this.prime = new BigInteger(pBits, 100, Rand.getRand()); 
     }
 
     public BigInteger getBase(int bits) {
